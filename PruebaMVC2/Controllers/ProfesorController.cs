@@ -44,7 +44,7 @@ namespace PruebaMVC2.Controllers
                         }
                         else
                         {
-                            Lst2 = (from x in db.Person
+                            PTVM = (from x in db.Person
                                     where P.Id_Person == x.Id_Person
                                     select new ProfesorTableViewModel
                                     {
@@ -54,7 +54,8 @@ namespace PruebaMVC2.Controllers
                                         Mail = x.Mail,
                                         Phone = x.Phone,
                                         State = "Inactivo"
-                                    }).ToList();
+                                    }).Single();
+                            Lst2.Add(PTVM);
                         }
                     }
                 }
