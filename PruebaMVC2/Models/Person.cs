@@ -18,8 +18,8 @@ namespace PruebaMVC2.Models
         public Person()
         {
             this.Admin = new HashSet<Admin>();
-            this.Profesor = new HashSet<Profesor>();
             this.Student = new HashSet<Student>();
+            this.Profesor = new HashSet<Profesor>();
         }
     
         public int Id_Person { get; set; }
@@ -32,8 +32,8 @@ namespace PruebaMVC2.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Admin> Admin { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Profesor> Profesor { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Student> Student { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Profesor> Profesor { get; set; }
     }
 }

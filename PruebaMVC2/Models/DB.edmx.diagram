@@ -6,20 +6,20 @@
     <edmx:Diagrams>
       <Diagram DiagramId="8ac5f95b01bb464c8dc4f28513d86ca1" Name="Diagram1">
         <EntityTypeShape EntityType="ChallengeModel.Admin" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ChallengeModel.Person" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ChallengeModel.Profesor" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChallengeModel.Person" Width="1.5" PointX="0.625" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="ChallengeModel.Student" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ChallengeModel.Subject" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ChallengeModel.Subject" Width="1.5" PointX="8.125" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ChallengeModel.Subject_Profesor" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="ChallengeModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="ChallengeModel.User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <AssociationConnector Association="ChallengeModel.Id_Person" ManuallyRouted="false" />
         <AssociationConnector Association="ChallengeModel.Id_User" ManuallyRouted="false" />
-        <AssociationConnector Association="ChallengeModel.Id_PersonP" ManuallyRouted="false" />
         <AssociationConnector Association="ChallengeModel.Id_PersonS" ManuallyRouted="false" />
-        <AssociationConnector Association="ChallengeModel.Id_Profesor" ManuallyRouted="false" />
         <AssociationConnector Association="ChallengeModel.Id_UserS" ManuallyRouted="false" />
         <AssociationConnector Association="ChallengeModel.Id_Subject" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ChallengeModel.Profesor" Width="1.5" PointX="2.625" PointY="7.5" />
+        <AssociationConnector Association="ChallengeModel.Id_PersonP" />
+        <AssociationConnector Association="ChallengeModel.Id_Profesor" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

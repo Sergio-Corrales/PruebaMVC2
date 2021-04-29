@@ -22,7 +22,7 @@
 </div>
 
 @section scripts{
-<script>
+    <script>
     $(document).ready(function () {
 
         $("#frm").submit(function (e) {
@@ -33,14 +33,19 @@
 
             $.post(url, parametros, function (data) {
 
-                if (data == "1") {
-                    document.location.href = "@Url.Content("~/")";
+                if (data == "2") {
+                    document.location.href = "@Url.Content("~/Admin/Index")";
                 }
-                else { alert(data) }
+                else
+                {
+                    if (data == "3") {
+                        document.location.href = "@Url.Content("~/Student/index")";
+                    }
+                else { alert(data) } }
 
             })
 
         })
     })
-</script>
+    </script>
    }

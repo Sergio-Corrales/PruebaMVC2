@@ -22,7 +22,7 @@ namespace PruebaMVC2.Models
     
         public int Id_Profesor { get; set; }
         public int Id_Person { get; set; }
-        public bool State { get; set; }
+        public int State { get; set; }
     
         public virtual Person Person { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

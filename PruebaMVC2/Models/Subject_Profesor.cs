@@ -18,7 +18,7 @@ namespace PruebaMVC2.Models
         public int Id_Profesor { get; set; }
         public int Id_Subject { get; set; }
     
-        public virtual Profesor Profesor { get; set; }
         public virtual Subject Subject { get; set; }
+        public virtual Profesor Profesor { get; set; }
     }
 }

@@ -1,0 +1,35 @@
+﻿@model List<PruebaMVC2.Models.TableViewModels.ProfesorTableViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Profesores</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Id</th>
+                <th>Apellido</th>
+                <th>Nombre</th>
+                <th>Mail</th>
+                <th>Telefono</th>
+                <th>Estado</th>
+            </tr>
+
+            @foreach(var oElemento in Model)
+            {
+             <tr>
+                <td>@oElemento.Id</td>
+                <td>@oElemento.Firstname</td>
+                <td>@oElemento.Lastname</td>
+                <td>@oElemento.Mail</td>
+                <td>@oElemento.Phone</td>
+                <td>@oElemento.State</td>
+             </tr>
+            }
+        </table>
+    </div>
+    
+</div>
+

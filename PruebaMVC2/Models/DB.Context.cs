@@ -27,11 +27,11 @@ namespace PruebaMVC2.Models
     
         public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Person> Person { get; set; }
-        public virtual DbSet<Profesor> Profesor { get; set; }
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }
         public virtual DbSet<Subject_Profesor> Subject_Profesor { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Profesor> Profesor { get; set; }
     }
 }
