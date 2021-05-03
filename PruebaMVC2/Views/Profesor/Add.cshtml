@@ -1,0 +1,44 @@
+﻿@model PruebaMVC2.Models.ViewModels.ProfesorViewModel
+@{
+    ViewBag.Title = "Ingresar Profesor";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<br>
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("Add", "Profesor", FormMethod.Post, new { role = "Form", @class = "" }))
+        {
+            //Helper de seguridad
+            @Html.AntiForgeryToken()
+            //helper para mostrar errores detectado por el data annotation
+            @Html.ValidationMessage("error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.Id)
+            @Html.TextBoxFor(d => d.Id, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.FirstName)
+            @Html.TextBoxFor(d => d.FirstName, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.LastName)
+            @Html.TextBoxFor(d => d.LastName, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.Email)
+            @Html.TextBoxFor(d => d.Email, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.Phone)
+            @Html.TextBoxFor(d => d.Phone, new { @class = "form-control" })
+
+            <br>
+
+            <div>
+                <input type="submit" class="btn btn-success" value="Guardar" />
+            </div>
+
+        }
+
+    </div>
+
+</div>

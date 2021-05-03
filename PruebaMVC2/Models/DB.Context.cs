@@ -33,5 +33,6 @@ namespace PruebaMVC2.Models
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Profesor> Profesor { get; set; }
+        public virtual DbSet<Subject_Student> Subject_Student { get; set; }
     }
 }

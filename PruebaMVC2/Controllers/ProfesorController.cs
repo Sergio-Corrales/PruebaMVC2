@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using PruebaMVC2.Models;
 using PruebaMVC2.Models.TableViewModels;
+using PruebaMVC2.Models.ViewModels;
 
 namespace PruebaMVC2.Controllers
 {
@@ -63,5 +64,58 @@ namespace PruebaMVC2.Controllers
             }
             return View(Lst2);
         }
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(ProfesorViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            using (var db = new ChallengeEntities())
+            {
+                Person oPerson = new Person();
+
+                oPerson.Id = model.Id;
+                oPerson.FirstName = model.FirstName;
+                oPerson.LastName = model.LastName;
+                oPerson.Mail = model.Email;
+                oPerson.Phone = model.Phone;
+
+                db.Person.Add(oPerson);
+                db.SaveChanges();
+
+                var lst = (from x in db.Person
+                          where x.Id == model.Id
+                          select x).ToList();
+
+                if (lst.Count() > 0)
+                {
+                    foreach(var P in lst)
+                    {
+                        if (P.Id == model.Id)
+                        {
+                            Profesor oProfesor = new Profesor();
+                            oProfesor.Id_Person = P.Id_Person;
+                            oProfesor.State = 1;
+
+                            db.Profesor.Add(oProfesor);
+                            db.SaveChanges();
+                        }
+                    }
+                }
+            }
+
+            return Redirect(Url.Content("~/Profesor/Index"));
+        }
     }
+
+    
 }

@@ -20,6 +20,9 @@
         <EntityTypeShape EntityType="ChallengeModel.Profesor" Width="1.5" PointX="2.625" PointY="7.5" />
         <AssociationConnector Association="ChallengeModel.Id_PersonP" />
         <AssociationConnector Association="ChallengeModel.Id_Profesor" />
+        <EntityTypeShape EntityType="ChallengeModel.Subject_Student" Width="1.5" PointX="6.125" PointY="4.375" />
+        <AssociationConnector Association="ChallengeModel.Fk_Id_Student" />
+        <AssociationConnector Association="ChallengeModel.Fk_Id_Subject" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

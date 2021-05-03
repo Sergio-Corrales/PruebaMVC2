@@ -14,6 +14,12 @@ namespace PruebaMVC2.Models
     
     public partial class Student
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Student()
+        {
+            this.Subject_Student = new HashSet<Subject_Student>();
+        }
+    
         public int Id_Student { get; set; }
         public int Id_User { get; set; }
         public int Id_Person { get; set; }
@@ -21,5 +27,7 @@ namespace PruebaMVC2.Models
     
         public virtual Person Person { get; set; }
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Subject_Student> Subject_Student { get; set; }
     }
 }

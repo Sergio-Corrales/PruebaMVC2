@@ -134,6 +134,8 @@
     <Compile Include="Controllers\ProfesorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
+    <Compile Include="Controllers\SubjectStudentController.cs" />
+    <Compile Include="Filters\VerifySession.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +172,9 @@
     <Compile Include="Models\Subject_Profesor.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Subject_Student.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
@@ -178,6 +183,8 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\ProfesorViewModel.cs" />
+    <Compile Include="Models\ViewModels\SubjectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -238,6 +245,10 @@
     <Content Include="Views\Student\Index.cshtml" />
     <Content Include="Views\Profesor\Index.cshtml" />
     <Content Include="Views\Subject\Index.cshtml" />
+    <Content Include="Views\Subject\Add.cshtml" />
+    <Content Include="Views\Profesor\Add.cshtml" />
+    <Content Include="Views\SubjectStudent\Index.cshtml" />
+    <Content Include="Views\SubjectStudent\Inscripcion.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

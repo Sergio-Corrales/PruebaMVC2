@@ -1,0 +1,41 @@
+﻿@model PruebaMVC2.Models.ViewModels.SubjectViewModel
+@{
+    ViewBag.Title = "Agregar Materia";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<br>
+<div class="row">
+    <div class="col-md-12">
+
+        @using (Html.BeginForm("Add", "Subject", FormMethod.Post, new { role = "Form", @class = "" }))
+        {
+            //Helper de seguridad
+            @Html.AntiForgeryToken()
+            //helper para mostrar errores detectado por el data annotation
+            @Html.ValidationMessage("error", new { @class = "text-danger" })
+
+            @Html.LabelFor(d => d.Name)
+            @Html.TextBoxFor(d => d.Name, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.Description)
+            @Html.TextBoxFor(d => d.Description, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.Capacity)
+            @Html.TextBoxFor(d => d.Capacity, new { @class = "form-control" })
+
+            @Html.LabelFor(d => d.TimeTable)
+            @Html.TextBoxFor(d => d.TimeTable, new { @class = "form-control" })
+
+            <br>
+
+            <div>
+                <input type="submit" class="btn btn-success" value="Guardar" />
+            </div>
+
+        }
+
+    </div>
+
+</div>

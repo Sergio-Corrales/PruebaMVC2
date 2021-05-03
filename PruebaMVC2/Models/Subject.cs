@@ -18,6 +18,7 @@ namespace PruebaMVC2.Models
         public Subject()
         {
             this.Subject_Profesor = new HashSet<Subject_Profesor>();
+            this.Subject_Student = new HashSet<Subject_Student>();
         }
     
         public int Id_Subject { get; set; }
@@ -29,5 +30,7 @@ namespace PruebaMVC2.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Subject_Profesor> Subject_Profesor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Subject_Student> Subject_Student { get; set; }
     }
 }
